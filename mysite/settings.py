@@ -25,7 +25,7 @@ SECRET_KEY = 'pvl&$b@45w+hc#xawei!ys=&ofx6p$t_*v-n2w4#j!+3&dej40'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://intense-harbor-53992.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['intense-harbor-53992.herokuapp.com','127.0.0.1']
 
 
 # Application definition
