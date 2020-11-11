@@ -12,6 +12,7 @@
 
 .content {
     margin-left: 40px;
+    font-family: 'Goldman', cursive;
 }
 
 h1, h2, h3, h4 {
@@ -39,6 +40,8 @@ h1, h2, h3, h4 {
 
 .post {
     margin-bottom: 70px;
+    background-color:  #e6ff09;
+    color:#e6ff09;
 }
 
 .post h2 a, .post h1 a:visited {
