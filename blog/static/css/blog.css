@@ -1,6 +1,10 @@
 body{
     background-color: #020202;
 }
+.paragraf{
+    padding: 15px;
+    margin: auto;
+}
 .page-header {
     background-color: #0066c5;
     margin-top: 0;
