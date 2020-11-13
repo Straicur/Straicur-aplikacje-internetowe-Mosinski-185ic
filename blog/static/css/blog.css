@@ -15,6 +15,7 @@
     background-image: url("kapitan.PNG");
     margin-left: 40px;
     font-family: 'Goldman', cursive;
+    background-color: black;
     
 }
 
@@ -23,7 +24,7 @@ h1, h2, h3, h4 {
 }
 
 .date {
-    color: #828282;
+    color: #ffffff;
 }
 
 .save {
@@ -42,9 +43,10 @@ h1, h2, h3, h4 {
 }
 
 .post {
+    padding: 10px;
     margin-bottom: 70px;
-    color:#2e2c2c;
-    border: 5px solid black;
+    color:#ffffff;
+    border: 5px solid rgb(255, 255, 255);
     border-radius: 40px 40px 40px 40px;
 }
 
