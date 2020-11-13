@@ -15,8 +15,7 @@
     background-image: url("kapitan.PNG");
     margin-left: 40px;
     font-family: 'Goldman', cursive;
-    border: 5px solid black;
-    border-radius: 60px 0px 0px 20px;
+    
 }
 
 h1, h2, h3, h4 {
@@ -49,4 +48,8 @@ h1, h2, h3, h4 {
 
 .post h2 a, .post h1 a:visited {
     color: #fafafa;
+}
+.row{
+    border: 5px solid black;
+    border-radius: 40px 40px 40px 40px;
 }
