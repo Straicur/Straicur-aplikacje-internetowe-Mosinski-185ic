@@ -1,3 +1,6 @@
+body{
+    background-color: #020202;
+}
 .page-header {
     background-color: #0066c5;
     margin-top: 0;
@@ -10,9 +13,7 @@
     font-size: 36pt;
     text-decoration: none;
 }
-.container{
-    background-color: #020202;
-}
+
 .content {
     background-image: url("blog/static/kapitan.PNG");
     margin-left: 40px;
