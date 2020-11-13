@@ -14,7 +14,7 @@
     background-color: #020202;
 }
 .content {
-    background-image: url("kapitan.PNG");
+    background-image: url("blog/static/kapitan.PNG");
     margin-left: 40px;
     font-family: 'Goldman', cursive;
     color: #fafafa;
