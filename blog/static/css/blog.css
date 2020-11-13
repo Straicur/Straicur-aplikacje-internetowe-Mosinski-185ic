@@ -44,12 +44,10 @@ h1, h2, h3, h4 {
 .post {
     margin-bottom: 70px;
     color:#2e2c2c;
+    border: 5px solid black;
+    border-radius: 40px 40px 40px 40px;
 }
 
 .post h2 a, .post h1 a:visited {
     color: #fafafa;
-}
-.col-md-8{
-    border: 5px solid black;
-    border-radius: 40px 40px 40px 40px;
 }
