@@ -9,14 +9,13 @@
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
+    background-color: black;
 }
 
 .content {
     background-image: url("kapitan.PNG");
     margin-left: 40px;
-    font-family: 'Goldman', cursive;
-    background-color: black;
-    
+    font-family: 'Goldman', cursive;  
 }
 
 h1, h2, h3, h4 {
