@@ -1,6 +1,11 @@
 body{
     background-color: #020202;
 }
+.loginprz
+{
+    margin-top: 15px;
+    margin-left: 30px;
+}
 .tabelalogin{
     padding: 20px ;
     margin-top: 30px;
