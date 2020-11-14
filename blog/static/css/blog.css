@@ -12,12 +12,12 @@ body{
     padding-top: 15px;
     font-size: 25px;
 }
-.tabelalew{
-    padding: 20px 20px 5px 10px;
+.tabelagr{
+    padding: 20px 20px 20px 20px;
     margin: 10px;
 }
-.tabelapr{
-    padding: 20px 10px 5px 20px;
+.tabeladl{
+    padding: 0px 20px 20px 20px;
     margin: 10px;
 }
 .loguout{
