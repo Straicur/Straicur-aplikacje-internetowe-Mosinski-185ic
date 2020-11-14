@@ -9,6 +9,9 @@ body{
     color: white;
     text-decoration: none;
 }
+.loguout:hover{
+    color: rgb(2, 2, 2);
+}
 .page-header {
     background-color: #0066c5;
     margin-top: 0;
