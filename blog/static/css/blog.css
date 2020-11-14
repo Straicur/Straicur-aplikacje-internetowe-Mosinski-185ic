@@ -5,6 +5,10 @@ body{
     padding-top: 15px;
     font-size: 25px;
 }
+.top-menu{
+    color: white;
+    text-decoration: none;
+}
 .page-header {
     background-color: #0066c5;
     margin-top: 0;
