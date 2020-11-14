@@ -13,10 +13,12 @@ body{
     font-size: 25px;
 }
 .tabelalew{
-    padding: 20px 20px 20px 10px;
+    padding: 20px 20px 5px 10px;
+    margin: 10px;
 }
 .tabelapr{
-    padding: 20px 10px 20px 20px;
+    padding: 20px 10px 5px 20px;
+    margin: 10px;
 }
 .loguout{
     color: white;
