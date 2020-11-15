@@ -20,7 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/login/', views.LoginView.as_view(), name='login'),
     path('accounts/logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
-    path('accounts/password_change_form/', views.PasswordChangeView.as_view(), name='password_change'),
+    path('accounts/password_change/', views.PasswordChangeView.as_view(), name='password_change'),
     path('accounts/password_change_done/', views.PasswordChangeDoneView.as_view(), name='password_change_done'),
     path('', include('blog.urls')),
 ]
