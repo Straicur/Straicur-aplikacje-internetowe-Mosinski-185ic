@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['intense-harbor-53992.herokuapp.com','127.0.0.1']
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'post_list'
+LOGIN_REDIRECT_URL = 'post_list'
 # Application definition
 
 INSTALLED_APPS = [
