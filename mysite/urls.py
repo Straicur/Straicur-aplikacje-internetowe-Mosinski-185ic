@@ -21,8 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
     path('accounts/logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
-    path('accounts/password_reset/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
-    path('accounts/password_reset_done/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
+    path('accounts/password_reset/', auth_views.PasswordResetView.as_view(), name='pasword_reset'),
+    path('accounts/password_reset_done/', auth_views.PasswordResetDoneView.as_view(), name='pasword_reset_done'),
     path('signup/', views.signup, name='signup'),
     path('', include('blog.urls')),
     
