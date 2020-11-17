@@ -23,8 +23,6 @@ urlpatterns = [
     path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
     path('accounts/logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
     path('signup/', views.signup, name='signup'),
-    
-    path('', TemplateView.as_view(template_name='post_list.html'), name='post_list'),
     path('', include('blog.urls')),
     
 ]
