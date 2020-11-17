@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path , include
 from django.contrib.auth import views as auth_views
 from blog import views
+from django.views.generic.base import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
     path('accounts/logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
-    path('signup', views.signup, name='signup'),
+    path('signup/', views.signup, name='signup'),
+    path('', TemplateView.as_view(template_name='post_list.html'), name='post_list'),
     path('', include('blog.urls')),
+    
 ]
