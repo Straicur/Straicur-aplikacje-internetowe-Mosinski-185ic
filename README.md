@@ -42,7 +42,9 @@ Po usunięciu postu.
 
 ![list](blog/static/Scr/14.PNG "Start")
 ![list](blog/static/Scr/15.PNG "Start")
+
 <h1>Zmiana hasła na mailu .</h1>
+
 ![list](blog/static/Scr/17.PNG "Start")
 ![list](blog/static/Scr/18.PNG "Start")
 
