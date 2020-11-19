@@ -7,6 +7,7 @@
 
     <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
+    
         <table class="tabelalogin">
         <tr>
             <td class="tabelagr">{{ form.username.label_tag }}</td>
@@ -21,7 +22,8 @@
         <input type="submit" class="btn btn-secondary btn-lg loginprz" value="login"  />
         
         <input type="hidden" name="next" value="{{ next }}" />
-        
+        <p><a href="{% url 'password_reset' %}" class ="loguout">Reset hasła</a></p>
+            
         
     </form>
 {% endblock %}  
