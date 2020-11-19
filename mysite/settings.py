@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['intense-harbor-53992.herokuapp.com','127.0.0.1']
 
 LOGIN_REDIRECT_URL = 'post_list'
 LOGOUT_REDIRECT_URL = 'post_list'   
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 #EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
 # Application definition
 
