@@ -19,5 +19,33 @@ Po usunięciu postu.
 ## Admin
 ![list](blog/static/Scr/4.PNG "Start")
 
+# Laboratorium 2 Python
+
+## Strona bez zalogowania . Ograniczona dostępność do funkcji na stronie.
+
+![list](blog/static/Scr/7.PNG "Start")
+![list](blog/static/Scr/8.PNG "Start")
+## Rejestracja dostępna dla wszystkich użytkowników .
+
+![list](blog/static/Scr/9.PNG "Start")
+## Logowanie .
+
+![list](blog/static/Scr/10.PNG "Start")
+## Po zalogowaniu możliwe wszystko co może admin na stronie .
+
+![list](blog/static/Scr/11.PNG "Start")
+## Zmiana hasła .
+
+![list](blog/static/Scr/12.PNG "Start")
+![list](blog/static/Scr/13.PNG "Start")
+## Reset hasła.
+
+![list](blog/static/Scr/14.PNG "Start")
+![list](blog/static/Scr/15.PNG "Start")
+
+<h1>Zmiana hasła na mailu .</h1>
+
+![list](blog/static/Scr/17.PNG "Start")
+![list](blog/static/Scr/18.PNG "Start")
 
 
