@@ -40,6 +40,7 @@ Po usunięciu postu.
 ![list](blog/static/Scr/13.PNG "Start")
 ## Reset hasła.
 
+![list](blog/static/Scr/19.PNG "Start")
 ![list](blog/static/Scr/14.PNG "Start")
 ![list](blog/static/Scr/15.PNG "Start")
 
@@ -47,5 +48,5 @@ Po usunięciu postu.
 
 ![list](blog/static/Scr/17.PNG "Start")
 ![list](blog/static/Scr/18.PNG "Start")
-![list](blog/static/Scr/19.PNG "Start")
+
 
