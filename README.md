@@ -47,5 +47,5 @@ Po usunięciu postu.
 
 ![list](blog/static/Scr/17.PNG "Start")
 ![list](blog/static/Scr/18.PNG "Start")
-
+![list](blog/static/Scr/19.PNG "Start")
 
