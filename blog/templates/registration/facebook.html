@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% local socialaccount %}
+{% providers_media_js %}
+
+{% block content %}
+   
+    <h2>Facebook</h2>
+    <form method="post">
+    <div class= "tabelalogin">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    </div>
+    </form>
+{% endblock %} 
