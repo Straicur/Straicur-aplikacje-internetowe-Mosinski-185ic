@@ -45,7 +45,7 @@ urlpatterns = [
          name='password_reset_complete'),
 
     path('signup/', views.signup, name='signup'),
-    path('social-auth/', include('social_django.urls', namespace='social')),
+    path('accounts/', include('allauth.urls')),
     path('', include('blog.urls')),
     
 ]
