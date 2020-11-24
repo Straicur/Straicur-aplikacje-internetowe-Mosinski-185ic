@@ -5,6 +5,7 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 
+
 {% block content %}
     
 
@@ -19,10 +20,15 @@
         {% get_providers as socialaccount_providers %}
 
         <div class="socialaccount_ballot">
-
         <ul class="socialaccount_providers">
-            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+            <li>
+                <a title="Google" class="socialaccount_provider google" href="/accounts/google/login/?process=login">Google</a>
+            </li>
+            <li>
+                <a title="Discord" class="socialaccount_provider discord" href="/accounts/discord/login/?process=login">Discord</a>
+            </li>
         </ul>
+
         {% include "socialaccount/snippets/login_extra.html" %}
         <table class="tabelalogin">
         <tr>
