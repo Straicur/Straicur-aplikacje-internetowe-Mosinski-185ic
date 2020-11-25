@@ -1,3 +1,11 @@
+# Linki przekierowujące do Labolatoriów 
+
+<p><a href="#Lab1">Labolatorium nr: 1</a></p>
+<p><a href="#Lab2">Labolatorium nr: 2</a></p>
+<p><a href="#Lab3">Labolatorium nr: 3</a></p>
+
+<a id="Lab1"></a></p>
+
 # Laboratorium 1 Python(Django+Heroku)
 Na stronie starałem się zawrzeć wszystkie wymagania do lab1 i wydaję mi się że zostały spełnione , dodałem również przycisk usuwania obok edycji po kliknieciu w post .
 <br>
@@ -19,7 +27,8 @@ Po usunięciu postu.
 ## Admin
 ![list](blog/static/Scr/4.PNG "Start")
 
-# Laboratorium 2 Python
+<a id="Lab2"></a>
+# Laboratorium 2 
 
 ## Strona bez zalogowania . Ograniczona dostępność do funkcji na stronie.
 
@@ -40,6 +49,7 @@ Po usunięciu postu.
 ![list](blog/static/Scr/13.PNG "Start")
 ## Reset hasła.
 
+![list](blog/static/Scr/19.PNG "Start")
 ![list](blog/static/Scr/14.PNG "Start")
 ![list](blog/static/Scr/15.PNG "Start")
 
@@ -48,4 +58,5 @@ Po usunięciu postu.
 ![list](blog/static/Scr/17.PNG "Start")
 ![list](blog/static/Scr/18.PNG "Start")
 
-
+<a id="Lab3"></a>
+# Laboratorium 3 
