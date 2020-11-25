@@ -1,3 +1,4 @@
+<a href="#Lab2"> LAb2</a>
 # Laboratorium 1 Python(Django+Heroku)
 Na stronie starałem się zawrzeć wszystkie wymagania do lab1 i wydaję mi się że zostały spełnione , dodałem również przycisk usuwania obok edycji po kliknieciu w post .
 <br>
@@ -19,6 +20,7 @@ Po usunięciu postu.
 ## Admin
 ![list](blog/static/Scr/4.PNG "Start")
 
+<a id="Lab2">(LAb2)</a>
 # Laboratorium 2 Python
 
 ## Strona bez zalogowania . Ograniczona dostępność do funkcji na stronie.
