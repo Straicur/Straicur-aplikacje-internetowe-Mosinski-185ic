@@ -1,7 +1,7 @@
-<a href="#Lab2">Labolatorium nr:1</a>
-<a href="#Lab2">Labolatorium nr:2</a>
-<a href="#Lab2">Labolatorium nr:3</a>
-<a id="Lab1"></a>
+<p><a href="#Lab2">Labolatorium nr:1</a></p>
+<p><a href="#Lab2">Labolatorium nr:2</a></p>
+<p><a href="#Lab2">Labolatorium nr:3</a></p>
+<a id="Lab1"></a></p>
 # Laboratorium 1 Python(Django+Heroku)
 Na stronie starałem się zawrzeć wszystkie wymagania do lab1 i wydaję mi się że zostały spełnione , dodałem również przycisk usuwania obok edycji po kliknieciu w post .
 <br>
