@@ -15,19 +15,12 @@
 
     <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
-        <h1>{% trans "Sign In" %}</h1>
+
+        <h1 class = "h3 mb-3 font-weight-normal" >{% trans "Sign In" %}</h1>
 
         {% get_providers as socialaccount_providers %}
 
-        <div class="socialaccount_ballot">
-        <ul class="socialaccount_providers">
-            <li>
-                <a title="Google" class="socialaccount_provider google " href="/accounts/google/login/?process=login"><i class ="fab fa-google" aria-hidden="true"> </i>Google</a>
-            </li>
-            <li>
-                <a title="Discord" class="socialaccount_provider discord " href="/accounts/discord/login/?process=login"><i class ="fab fa-google" aria-hidden="true"> </i>Discord</a>
-            </li>
-        </ul>
+        
 
         {% include "socialaccount/snippets/login_extra.html" %}
         <table class="tabelalogin">
@@ -40,11 +33,20 @@
             <td class="tabeladl">{{ form.password }}</td>
         </tr>   
         </table>
-
-        <input type="submit" class="btn btn-secondary btn-lg loginprz" value="login"  />
-        
+        <div class = "loginprz" style = "float: left;"><input type="submit" class="btn btn-outline-info btn-lg " value="Login"  /></div>
+        <div class = "loginprz" style = "float: left; margin-left: 10px;"><a class = "btn btn-outline-info btn-lg " href="{% url 'password_reset' %}" >Reset hasła</a></div>
+        <div class="socialaccount_ballot"style = "clear: both"> 
+        <p>Zaloguj się za pomocą :</p>
+        <ul class="socialaccount_providers">
+            <li>
+                <a title="Google" class="socialaccount_provider google " href="/accounts/google/login/?process=login"></span>Google</a>
+            </li>
+            <li>
+                <a title="Discord" class="socialaccount_provider discord " href="/accounts/discord/login/?process=login"></span>Discord</a>
+            </li>
+        </ul>
         <input type="hidden" name="next" value="{{ next }}" />
-        <p><a href="{% url 'password_reset' %}" class ="loguout">Reset hasła</a></p>
+        
         
         
     </form>
