@@ -58,5 +58,25 @@ Po usunięciu postu.
 ![list](blog/static/Scr/17.PNG "Start")
 ![list](blog/static/Scr/18.PNG "Start")
 
+<h1>Zmiana hasła wyświetalana w konsoli .</h1>
+
+![list](blog/static/Scr/20.PNG "Start")
+![list](blog/static/Scr/21.PNG "Start")
+
 <a id="Lab3"></a>
 # Laboratorium 3 
+
+## Uwierzytelnianie przez social media
+
+![list](blog/static/Scr/22.PNG "Start")
+
+## Uwierzytelnianie przez Google
+
+![list](blog/static/Scr/23.PNG "Start")
+![list](blog/static/Scr/24.PNG "Start")
+
+## Uwierzytelnianie przez Discord
+
+![list](blog/static/Scr/25.PNG "Start")
+![list](blog/static/Scr/26.PNG "Start")
+
