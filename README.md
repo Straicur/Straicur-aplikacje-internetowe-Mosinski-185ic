@@ -3,7 +3,7 @@
 <p><a href="#Lab1">Labolatorium nr: 1</a></p>
 <p><a href="#Lab2">Labolatorium nr: 2</a></p>
 <p><a href="#Lab3">Labolatorium nr: 3</a></p>
-
+<p>Lab 4 w folderze Lab 4</p>
 <a id="Lab1"></a></p>
 
 # Laboratorium 1 Python(Django+Heroku)
