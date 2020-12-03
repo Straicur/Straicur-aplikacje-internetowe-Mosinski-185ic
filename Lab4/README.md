@@ -8,18 +8,18 @@
 
 # Laboratorium 4 REST API z DRF
 ![list](DRF/static/Scr/1.PNG "Start")
-![list](Lab4/DRF/static/Scr/2.PNG "Start")
-![list](Lab4/DRF/static/Scr/3.PNG "Start")
-![list](Lab4/DRF/static/Scr/4.PNG "Start")
-![list](Lab4/DRF/static/Scr/5.PNG "Start")
-![list](Lab4/DRF/static/Scr/6.PNG "Start")
-![list](Lab4/DRF/static/Scr/7.PNG "Start")
-![list](Lab4/DRF/static/Scr/8.PNG "Start")
-![list](Lab4/DRF/static/Scr/9.PNG "Start")
-![list](Lab4/DRF/static/Scr/10.PNG "Start")
-![list](Lab4/DRF/static/Scr/11.PNG "Start")
-![list](Lab4/DRF/static/Scr/12.PNG "Start")
-![list](Lab4/DRF/static/Scr/13.PNG "Start")
+![list](DRF/static/Scr/2.PNG "Start")
+![list](DRF/static/Scr/3.PNG "Start")
+![list](DRF/static/Scr/4.PNG "Start")
+![list](DRF/static/Scr/5.PNG "Start")
+![list](DRF/static/Scr/6.PNG "Start")
+![list](DRF/static/Scr/7.PNG "Start")
+![list](DRF/static/Scr/8.PNG "Start")
+![list](DRF/static/Scr/9.PNG "Start")
+![list](DRF/static/Scr/10.PNG "Start")
+![list](DRF/static/Scr/11.PNG "Start")
+![list](DRF/static/Scr/12.PNG "Start")
+![list](DRF/static/Scr/13.PNG "Start")
 
 
 
