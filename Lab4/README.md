@@ -7,7 +7,7 @@
 <a id="Lab4"></a></p>
 
 # Laboratorium 4 REST API z DRF
-![list](Lab4/DRF/static/Scr/1.PNG "Start")
+![list](DRF/static/Scr/1.PNG "Start")
 ![list](Lab4/DRF/static/Scr/2.PNG "Start")
 ![list](Lab4/DRF/static/Scr/3.PNG "Start")
 ![list](Lab4/DRF/static/Scr/4.PNG "Start")
