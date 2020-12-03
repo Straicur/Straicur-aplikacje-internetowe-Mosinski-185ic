@@ -10,13 +10,21 @@
 <p><a href = "https://github.com/wsvincent/restapiswithdjango">Repozytorium poglądowe </a></p>
 
 <h1>DRF api\v1</h1>
+
 Post list przy nie zalogowaniu .
+
 ![list](DRF/static/Scr/1.PNG "Start")
+
 Logowanie 
+
 ![list](DRF/static/Scr/2.PNG "Start")
+
 Post list po zalogowaniu 
+
 ![list](DRF/static/Scr/3.PNG "Start")
+
 Post detail 
+
 ![list](DRF/static/Scr/4.PNG "Start")
 
 <h1>DRF api\v2</h1>
