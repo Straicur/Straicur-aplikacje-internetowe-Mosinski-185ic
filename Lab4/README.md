@@ -30,6 +30,8 @@ Post detail
 ![list](DRF/static/Scr/4.PNG "Start")
 
 <h1>DRF api\v2</h1>
+Model Ksiazka z danymi (author  title created_at updated_at) i serializer z fields = ('id', 'author', 'title',)
+Filty : (filter_backends = [filters.SearchFilter ,filters.OrderingFilter])
 Lista Ksiazek 
 
 ![list](DRF/static/Scr/5.PNG "Start")
