@@ -8,10 +8,12 @@
 
 # Laboratorium 4 REST API z DRF
 <p><a href = "https://github.com/wsvincent/restapiswithdjango">Repozytorium poglądowe </a></p>
+<br>
+DRF jest naprawdę przyjemny po lekkim zgłębieniu . W miare przejrzysta dokumentacja , Redoc-Dokumentacja Moich API , bardzo mało kodu w porównaniu do czystego diango 
 
 <h1>DRF api\v1</h1>
 
-Post list przy nie zalogowaniu .
+Post list dla nie zalogowanych .
 
 ![list](DRF/static/Scr/1.PNG "Start")
 
@@ -57,9 +59,11 @@ Wyszukane posty
 ![list](DRF/static/Scr/11.PNG "Start")
 
 <h1>Swagger</h1>
+
 ![list](DRF/static/Scr/12.PNG "Start")
 
-<h1>Redoc</h1>
+<h1>Redoc (Dokumentacja Moich API)</h1>
+
 ![list](DRF/static/Scr/13.PNG "Start")
 
 
