@@ -1,6 +1,13 @@
 {% extends 'blog/base.html' %}
 {% block content %}
 <p class = "paragraf">Posty :</p>
+    {% if not request.COOKIES.visits %}
+        <p>This is your first visit to the site. From now on I will track your visits to this site.</p>
+    {% else %}
+        <p>
+            This is your {{ request.COOKIES.visits|add:'1' }} visit
+        </p>
+    {% endif %}
     {% for post in posts %}
         <div class="post">
             <div class="date">
