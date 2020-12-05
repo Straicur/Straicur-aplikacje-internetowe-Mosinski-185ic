@@ -86,13 +86,3 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
-
-def track_user(request):
-    response = render(request, 'blog/post_list.html') # store the response in response variable
-    if not request.COOKIES.get('visits'):        
-        response.set_cookie('visits', '1', 3600 * 24 * 365 * 2)
-    else:
-        visits = int(request.COOKIES.get('visits', '1')) + 1
-        response.set_cookie('visits', str(visits),  3600 * 24 * 365 * 2)
-    return response
-
