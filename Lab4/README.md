@@ -6,7 +6,7 @@ DRF jest naprawdę przyjemny po lekkim zgłębieniu . W miare przejrzysta dokume
 
 <h1>DRF api\v1</h1>
 
-Post list dla nie zalogowanych .
+Post list dla nie zalogowanych . W kórym nie wyświetlają się żadne posty ponieważ zostasły ustawione opcje dostępu DEFAULT_PERMISSION_CLASSES ('rest_framework.permissions.IsAuthenticated') 
 
 ![list](DRF/static/Scr/1.PNG "Start")
 
@@ -21,6 +21,8 @@ Post list po zalogowaniu
 Post detail 
 
 ![list](DRF/static/Scr/4.PNG "Start")
+
+Jakie kolwiek akcje na poście może tylko wykonywać autor .
 
 <h1>DRF api\v2</h1>
 Model Ksiazka z danymi (author  title created_at updated_at) i serializer z fields = ('id', 'author', 'title',)
@@ -56,6 +58,7 @@ Wyszukane posty
 ![list](DRF/static/Scr/11.PNG "Start")
 
 <h1>Swagger</h1>
+Jak widać są tu dwie aplikacje v1 i v2 .
 
 ![list](DRF/static/Scr/12.PNG "Start")
 
