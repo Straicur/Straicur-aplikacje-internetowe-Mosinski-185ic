@@ -1,10 +1,3 @@
-# Linki przekierowujące do Labolatoriów 
-
-<p><a href="#Lab4">Labolatorium nr: 1</a></p>
-<p><a href="#Lab5">Labolatorium nr: 2</a></p>
-<p><a href="#Lab6">Labolatorium nr: 3</a></p>
-
-<a id="Lab4"></a></p>
 
 # Laboratorium 4 REST API z DRF
 <p><a href = "https://github.com/wsvincent/restapiswithdjango">Repozytorium poglądowe </a></p>
@@ -72,17 +65,6 @@ Wyszukane posty
 
 
 
-
-
-
-
-
-<a id="Lab5"></a>
-# Laboratorium 5 
-
-
-<a id="Lab6"></a>
-# Laboratorium 6 
 
 
 
