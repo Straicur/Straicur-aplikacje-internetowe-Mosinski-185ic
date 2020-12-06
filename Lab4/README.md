@@ -1,82 +1,88 @@
 # Linki przekierowujące do Labolatoriów 
 
-<p><a href="#Lab1">Labolatorium nr: 1</a></p>
-<p><a href="#Lab2">Labolatorium nr: 2</a></p>
-<p><a href="#Lab3">Labolatorium nr: 3</a></p>
+<p><a href="#Lab4">Labolatorium nr: 1</a></p>
+<p><a href="#Lab5">Labolatorium nr: 2</a></p>
+<p><a href="#Lab6">Labolatorium nr: 3</a></p>
 
-<a id="Lab1"></a></p>
+<a id="Lab4"></a></p>
 
-# Laboratorium 1 Python(Django+Heroku)
-Na stronie starałem się zawrzeć wszystkie wymagania do lab1 i wydaję mi się że zostały spełnione , dodałem również przycisk usuwania obok edycji po kliknieciu w post .
+# Laboratorium 4 REST API z DRF
+<p><a href = "https://github.com/wsvincent/restapiswithdjango">Repozytorium poglądowe </a></p>
 <br>
-Strona stworzona za pomocą poradnika :
-https://tutorial.djangogirls.org/pl/django_forms/
+DRF jest naprawdę przyjemny po lekkim zgłębieniu . W miare przejrzysta dokumentacja , Redoc-Dokumentacja Moich API , bardzo mało kodu w porównaniu do czystego diango 
+
+<h1>DRF api\v1</h1>
+
+Post list dla nie zalogowanych .
+
+![list](DRF/static/Scr/1.PNG "Start")
+
+Logowanie 
+
+![list](DRF/static/Scr/2.PNG "Start")
+
+Post list po zalogowaniu 
+
+![list](DRF/static/Scr/3.PNG "Start")
+
+Post detail 
+
+![list](DRF/static/Scr/4.PNG "Start")
+
+<h1>DRF api\v2</h1>
+Model Ksiazka z danymi (author  title created_at updated_at) i serializer z fields = ('id', 'author', 'title',)
 <br>
-Link do strony :
-https://intense-harbor-53992.herokuapp.com
+Filty : (filter_backends = [filters.SearchFilter ,filters.OrderingFilter])
 <br>
-## Strona składa się z strony głównej z możliwością dodania postu(jedynie przez admina):
-![list](blog/static/Scr/1.PNG "Start")
-![list](blog/static/Scr/3.PNG "Start")
-## Podstrony postu:
-![list](blog/static/Scr/2.PNG "Start")
-## I w podstronie postu 2 opcje usunięcie postu i edycja 
-![list](blog/static/Scr/5.PNG "Start")
-Po usunięciu postu.
-![list](blog/static/Scr/6.PNG "Start")
-## Admin
-![list](blog/static/Scr/4.PNG "Start")
+Lista Ksiazek 
 
-<a id="Lab2"></a>
-# Laboratorium 2 
+![list](DRF/static/Scr/5.PNG "Start")
 
-## Strona bez zalogowania . Ograniczona dostępność do funkcji na stronie.
+Lista Ksiazek bez zalogowania 
 
-![list](blog/static/Scr/7.PNG "Start")
-![list](blog/static/Scr/8.PNG "Start")
-## Rejestracja dostępna dla wszystkich użytkowników .
+![list](DRF/static/Scr/6.PNG "Start")
 
-![list](blog/static/Scr/9.PNG "Start")
-## Logowanie .
+Wyszukiwanie i filtry 
 
-![list](blog/static/Scr/10.PNG "Start")
-## Po zalogowaniu możliwe wszystko co może admin na stronie .
+![list](DRF/static/Scr/7.PNG "Start")
 
-![list](blog/static/Scr/11.PNG "Start")
-## Zmiana hasła .
+Filtr Id ASC
 
-![list](blog/static/Scr/12.PNG "Start")
-![list](blog/static/Scr/13.PNG "Start")
-## Reset hasła.
+![list](DRF/static/Scr/8.PNG "Start")
 
-![list](blog/static/Scr/19.PNG "Start")
-![list](blog/static/Scr/14.PNG "Start")
-![list](blog/static/Scr/15.PNG "Start")
+Filtr Id DESC
 
-<h1>Zmiana hasła na mailu .</h1>
+![list](DRF/static/Scr/9.PNG "Start")
 
-![list](blog/static/Scr/17.PNG "Start")
-![list](blog/static/Scr/18.PNG "Start")
+Przed wyszukiwaniem 
 
-<h1>Zmiana hasła wyświetalana w konsoli .</h1>
+![list](DRF/static/Scr/10.PNG "Start")
 
-![list](blog/static/Scr/20.PNG "Start")
-![list](blog/static/Scr/21.PNG "Start")
+Wyszukane posty 
 
-<a id="Lab3"></a>
-# Laboratorium 3 
+![list](DRF/static/Scr/11.PNG "Start")
 
-## Uwierzytelnianie przez social media
+<h1>Swagger</h1>
 
-![list](blog/static/Scr/22.PNG "Start")
+![list](DRF/static/Scr/12.PNG "Start")
 
-## Uwierzytelnianie przez Google
+<h1>Redoc (Dokumentacja Moich API)</h1>
 
-![list](blog/static/Scr/23.PNG "Start")
-![list](blog/static/Scr/24.PNG "Start")
+![list](DRF/static/Scr/13.PNG "Start")
 
-## Uwierzytelnianie przez Discord
 
-![list](blog/static/Scr/25.PNG "Start")
-![list](blog/static/Scr/26.PNG "Start")
+
+
+
+
+
+
+<a id="Lab5"></a>
+# Laboratorium 5 
+
+
+<a id="Lab6"></a>
+# Laboratorium 6 
+
+
 
