@@ -8,7 +8,7 @@ Zmiany api.
 Dodałem widok dla logawania i wylogowania , resetu hasła i potwierdzenia resetu oraz widok rejestracji przy urzyciu pakietu Django-rest-auth .
 
 <h1>DRF api\v1</h1>
-<h1>Logoin</h1>
+<h1>Login</h1>
 
 ![list](DRF/static/Scr/1.PNG "Start")
 <h1>Logout</h1>
