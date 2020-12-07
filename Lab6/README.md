@@ -22,25 +22,32 @@ Dodałem widok dla logawanie i wylogowania , resetu hasła i potwierdzenia reset
 <h1>Register</h1>
 
 ![list](DRF/static/Scr/5.PNG "Start")
-<h1>DRF api\v1</h1>
+<h1>Uwierzytelnienie Tocken</h1>
+
+Na poniższym screanie uruchamiam uwierzytelnianie za pomocą tokena. Aby teraz móc się zalogować potrzebny jest tocken przypisany do konta . 
 
 ![list](DRF/static/Scr/8.PNG "Start")
-<h1>DRF api\v1</h1>
+<h1>Tockeny</h1>
 
 ![list](DRF/static/Scr/6.PNG "Start")
-<h1>DRF api\v1</h1>
+<h1>Zalogowanie się przy pomocy tokena</h1>
 
 ![list](DRF/static/Scr/10.PNG "Start")
-<h1>DRF api\v1</h1>
+<h1>Uwierzytelnienia</h1>
+DRF posiada 2 domyślne metody uwierzytelniania :SessionAuthentication i BasicAuthentication .  W poniższym screanie wybieram SessionAuthentication i TockenAuthentication dzięki czemu urzytkownik bez tokenu może się zalogować .
 
 ![list](DRF/static/Scr/9.PNG "Start")
-<h1>DRF api\v1</h1>
-
+<h1>Tworzenie nowego użytkonika </h1>
 
 ![list](DRF/static/Scr/12.PNG "Start")
-<h1>DRF api\v1</h1>
+<h1>Zarejestrowanie</h1>
 
 ![list](DRF/static/Scr/13.PNG "Start")
+
+
+
+
+
 <h1>DRF api\v1</h1>
 
 
