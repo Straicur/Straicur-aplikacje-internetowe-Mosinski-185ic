@@ -5,7 +5,7 @@ Kontynuacja Lab 4.Dodałem viewsety, routery, uwierzytelnianie oraz licznik wizy
 <br>
 Zmiany api.
 <br>
-Dodałem widok dla logawanie i wylogowania , resetu hasła i potwierdzenia resetu oraz widok rejestracji przy urzyciu pakietu Django-rest-auth .
+Dodałem widok dla logawania i wylogowania , resetu hasła i potwierdzenia resetu oraz widok rejestracji przy urzyciu pakietu Django-rest-auth .
 
 <h1>DRF api\v1</h1>
 <h1>Logoin</h1>
