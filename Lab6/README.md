@@ -5,7 +5,7 @@ Kontynuacja Lab 4.Dodałem viewsety, routery, uwierzytelnianie oraz licznik wizy
 <br>
 Zmiany api.
 <br>
-Dodałem widok dla logawania i wylogowania , resetu hasła i potwierdzenia resetu oraz widok rejestracji przy urzyciu pakietu Django-rest-auth .
+Dodałem widok dla logawania i wylogowania , resetu hasła i potwierdzenia resetu oraz widok rejestracji przy użyciu pakietu Django-rest-auth .
 
 <h1>DRF api\v1</h1>
 <h1>Login</h1>
@@ -38,7 +38,7 @@ Na poniższym screanie uruchamiam uwierzytelnianie za pomocą tokena. Aby teraz 
 <h1>Tworzenie nowego użytkonika </h1>
 
 ![list](DRF/static/Scr/12.PNG "Start")
-<h1>Zarejestrowanie i otrzymanie tockena urzytkownika </h1>
+<h1>Zarejestrowanie i otrzymanie tockena użytkownika </h1>
 
 ![list](DRF/static/Scr/13.PNG "Start")
 
@@ -79,7 +79,8 @@ Natomiast zamiast url patterns trzeba wykorzystać routery . Po zmianach jest zn
 ![list](DRF/static/Scr/19.PNG "Start")
 
 <h1>Router</h1>
-Porzy pomocy SimpleRouter tworzymy nasz router . Następnie przy pomiocy metody regiter dodajemy nasze wcześniej stworzone viwesety oraz na konieć do zmiennej urlpatterns przypisujemy router.urls która tworzy za nas wszystkie urlpatterns.
+Przy pomocy SimpleRouter tworzymy nasz router . Następnie przy pomiocy metody regiter dodajemy nasze wcześniej stworzone viwesety oraz na konieć do zmiennej urlpatterns przypisujemy router.urls która tworzy za nas wszystkie urlpatterns.
+
 ![list](DRF/static/Scr/20.PNG "Start")
 
 
