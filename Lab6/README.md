@@ -2,8 +2,9 @@
 <p><a href = "https://github.com/wsvincent/restapiswithdjango">Repozytorium poglądowe </a></p>
 <br>
 Kontynuacja Lab 4.Dodałem viewsety, routery, uwierzytelnianie oraz licznik wizyt z użyciem cookies w podstronie /test_cookie/. Wymagane było korzystanie z dokumentacji przy większych zmiannach .
-
+<br>
 Zmiany api.
+<br>
 Dodałem widok dla logawanie i wylogowania , resetu hasła i potwierdzenia resetu oraz widok rejestracji przy urzyciu pakietu Django-rest-auth .
 
 <h1>DRF api\v1</h1>
