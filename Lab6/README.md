@@ -16,7 +16,7 @@ Link do strony :
 https://intense-harbor-53992.herokuapp.com
 <br>
 ## Strona składa się z strony głównej z możliwością dodania postu(jedynie przez admina):
-![list](blog/static/Scr/1.PNG "Start")
+![list](DRF/static/Scr/2.PNG "Start")
 ![list](blog/static/Scr/3.PNG "Start")
 ## Podstrony postu:
 ![list](blog/static/Scr/2.PNG "Start")
