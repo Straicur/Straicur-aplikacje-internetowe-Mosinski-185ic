@@ -1,82 +1,86 @@
-# Linki przekierowujące do Labolatoriów 
-
-<p><a href="#Lab1">Labolatorium nr: 1</a></p>
-<p><a href="#Lab2">Labolatorium nr: 2</a></p>
-<p><a href="#Lab3">Labolatorium nr: 3</a></p>
-
-<a id="Lab1"></a></p>
-
-# Laboratorium 1 Python(Django+Heroku)
-Na stronie starałem się zawrzeć wszystkie wymagania do lab1 i wydaję mi się że zostały spełnione , dodałem również przycisk usuwania obok edycji po kliknieciu w post .
+# Laboratorium 6 REST API z DRF (Kontynuacja)
+<p><a href = "https://github.com/wsvincent/restapiswithdjango">Repozytorium poglądowe </a></p>
 <br>
-Strona stworzona za pomocą poradnika :
-https://tutorial.djangogirls.org/pl/django_forms/
+Kontynuacja Lab 4.Dodałem viewsety, routery, uwierzytelnianie oraz licznik wizyt z użyciem cookies w podstronie /test_cookie/. Wymagane było korzystanie z dokumentacji przy większych zmiannach .
 <br>
-Link do strony :
-https://intense-harbor-53992.herokuapp.com
+Zmiany api.
 <br>
-## Strona składa się z strony głównej z możliwością dodania postu(jedynie przez admina):
-![list](blog/static/Scr/1.PNG "Start")
-![list](blog/static/Scr/3.PNG "Start")
-## Podstrony postu:
-![list](blog/static/Scr/2.PNG "Start")
-## I w podstronie postu 2 opcje usunięcie postu i edycja 
-![list](blog/static/Scr/5.PNG "Start")
-Po usunięciu postu.
-![list](blog/static/Scr/6.PNG "Start")
-## Admin
-![list](blog/static/Scr/4.PNG "Start")
+Dodałem widok dla logawania i wylogowania , resetu hasła i potwierdzenia resetu oraz widok rejestracji przy użyciu pakietu Django-rest-auth .
 
-<a id="Lab2"></a>
-# Laboratorium 2 
+<h1>DRF api\v1</h1>
+<h1>Login</h1>
 
-## Strona bez zalogowania . Ograniczona dostępność do funkcji na stronie.
+![list](DRF/static/Scr/1.PNG "Start")
+<h1>Logout</h1>
 
-![list](blog/static/Scr/7.PNG "Start")
-![list](blog/static/Scr/8.PNG "Start")
-## Rejestracja dostępna dla wszystkich użytkowników .
+![list](DRF/static/Scr/2.PNG "Start")
+<h1>Password Reset</h1>
 
-![list](blog/static/Scr/9.PNG "Start")
-## Logowanie .
+![list](DRF/static/Scr/3.PNG "Start")
+<h1>Password Reset confirm</h1>
 
-![list](blog/static/Scr/10.PNG "Start")
-## Po zalogowaniu możliwe wszystko co może admin na stronie .
+![list](DRF/static/Scr/4.PNG "Start")
+<h1>Register</h1>
 
-![list](blog/static/Scr/11.PNG "Start")
-## Zmiana hasła .
+![list](DRF/static/Scr/5.PNG "Start")
+<h1>Uwierzytelnienie Tocken</h1>
 
-![list](blog/static/Scr/12.PNG "Start")
-![list](blog/static/Scr/13.PNG "Start")
-## Reset hasła.
+Na poniższym screanie uruchamiam uwierzytelnianie za pomocą tokena. Aby teraz móc się zalogować potrzebny jest tocken przypisany do konta . 
 
-![list](blog/static/Scr/19.PNG "Start")
-![list](blog/static/Scr/14.PNG "Start")
-![list](blog/static/Scr/15.PNG "Start")
+![list](DRF/static/Scr/8.PNG "Start")
+<h1>Tockeny</h1>
 
-<h1>Zmiana hasła na mailu .</h1>
+![list](DRF/static/Scr/6.PNG "Start")
+<h1>Zalogowanie się przy pomocy tokena</h1>
 
-![list](blog/static/Scr/17.PNG "Start")
-![list](blog/static/Scr/18.PNG "Start")
+![list](DRF/static/Scr/10.PNG "Start")
 
-<h1>Zmiana hasła wyświetalana w konsoli .</h1>
+<h1>Tworzenie nowego użytkonika </h1>
 
-![list](blog/static/Scr/20.PNG "Start")
-![list](blog/static/Scr/21.PNG "Start")
+![list](DRF/static/Scr/12.PNG "Start")
+<h1>Zarejestrowanie i otrzymanie tockena użytkownika </h1>
 
-<a id="Lab3"></a>
-# Laboratorium 3 
+![list](DRF/static/Scr/13.PNG "Start")
 
-## Uwierzytelnianie przez social media
+<h1>Uwierzytelnienia</h1>
+DRF posiada 2 domyślne metody uwierzytelniania :SessionAuthentication i BasicAuthentication .  W poniższym screanie wybieram SessionAuthentication i TockenAuthentication dzięki czemu urzytkownik bez tokenu może się zalogować .
 
-![list](blog/static/Scr/22.PNG "Start")
+![list](DRF/static/Scr/9.PNG "Start")
 
-## Uwierzytelnianie przez Google
 
-![list](blog/static/Scr/23.PNG "Start")
-![list](blog/static/Scr/24.PNG "Start")
+Stworzyłem również dla api v1 a dokładnie dla url "api/v1/test_cookie" bardzo prosty licznik wejść. Stworzyłem nową metodę oraz podpiąłem ją pod odpowiedni url . Metoda ta zlicza ilość wejść na podstronę dzięki request.COOKIE.get , po wiejściu na podstronę po raz pierwszy cookie zawiera text "Welcome for the first time" oraz visits = 1, po kolejnych wejściach coockie zawiera text "Welcome back" oraz liczbę wejść visits .   
 
-## Uwierzytelnianie przez Discord
+<h1>Metoda</h1>
 
-![list](blog/static/Scr/25.PNG "Start")
-![list](blog/static/Scr/26.PNG "Start")
+![list](DRF/static/Scr/16.PNG "Start")
+<h1>Url</h1>
+
+![list](DRF/static/Scr/17.PNG "Start")
+<h1>Cookie. Pierwsze wejście.</h1>
+
+![list](DRF/static/Scr/14.PNG "Start")
+<h1>Cookie. Kolejne wejście.</h1>
+
+![list](DRF/static/Scr/18.PNG "Start")
+
+![list](DRF/static/Scr/15.PNG "Start")
+
+
+
+
+<h1>DRF api\v2</h1>
+<h1>Viewsety</h1>
+Do api/v2 zostały dodane view sety oraz routery .
+Zamiast wcześniej stworzonych 2 viewsów KsiazkaList i KsiazkaDetail stworzyłem 1 viewset KsiazkaViewSet . 
+W KsiazkaViewSet jeszcze jedną z zmian jest dodanie w permision_classes dodatkowego permision a dokładnie Is Authonticated , ponieważ wiesety nie odczytują z ustawień defaultpermission przez co nie zalogowany użytkownik mógł widzić posty .
+Natomiast zamiast url patterns trzeba wykorzystać routery . Po zmianach jest znacznie mniej kodu. Co do wyglądu naszych podstron są one takie same jak przy wykorzystaniu wczesniejszych viewsów.
+
+
+![list](DRF/static/Scr/19.PNG "Start")
+
+<h1>Router</h1>
+Przy pomocy SimpleRouter tworzymy nasz router . Następnie przy pomiocy metody regiter dodajemy nasze wcześniej stworzone viwesety oraz na konieć do zmiennej urlpatterns przypisujemy router.urls która tworzy za nas wszystkie urlpatterns.
+
+![list](DRF/static/Scr/20.PNG "Start")
+
 
