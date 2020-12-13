@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div style="padding: 2rem;font-family:'Bangers', sans-serif">
+        <h2 style="color:red">Element pobrany przy pomocy xPath</h2>
+        <p>
+            <h2 style="color:orange">Pobrany element :</h2>
+            {{lxml1}} 
+        </p>    
+    </div>
+    <div style="padding: 2rem;font-family:'Bangers', sans-serif">
+        <h2 style="color:red">Element pobrany przy pomocy Klasy</h2>
+        <p>
+            <h2 style="color:orange">Pobrany element :</h2>
+            {{lxml2}} 
+        </p>   
+    </div>
+{% endblock %}

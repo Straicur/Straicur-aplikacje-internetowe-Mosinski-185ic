@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="twoRemPaddig">
+        <h1>Przykład 1</h1>
+        <ul class="list-group-item">
+         <li><span>{{seventh_p_text}}</span></li> 
+        <h1>Ilość tagów :</h1>
+         <li><span>{{all_p_tagslen}}</span></li> 
+    </div>
+    <div class="twoRemPaddig">
+        <h1>Przykład 2</h1>
+        {% for items in top_items  %}
+            <ul class="list-group-item">
+                <li>{{items.title}}</li> 
+                <li>{{items.review}}</li>
+            </ul>
+        {% endfor %}
+    </div>
+    <div class="twoRemPaddig">
+        <h1>Przykład 3</h1>
+         {% for im in image_data %}
+            <li class="list-group-item">
+                <b>Src: </b> {{im.src}}<br>
+                <b>Alt: </b> {{im.alt}}<br>
+            </li> 
+        {% endfor %} <br>
+    </div>
+    <div class="twoRemPaddig">
+        <h1>Przykład 4</h1>
+        {% for produkt in all_products %}
+            <ul class="list-group-item">
+                <li>{{produkt.name}}</li>
+                <li>{{produkt.description}}</li>
+                <li>{{produkt.price}}</li>
+                <li>{{produkt.reviews}}</li>
+                <li>{{produkt.image}}</li>
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}
