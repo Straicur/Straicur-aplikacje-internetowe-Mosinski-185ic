@@ -4,6 +4,7 @@
 <h1>Oczywiście przed dodaniem elementów pobrałem  Beautifulsoup4 oraz lxml . </h1>
 <h1>Dla każdej z podstrony dodałem widoki</h1>
 # Przykłady z zajęć
+
 Do wyświetlenia przykładów z laboratorium wystarczyło do funkcji return przekazać render z dobrze ustawionym słownikiem oraz requestem . 
 
 ![list](/Lab5/Scr/1.PNG "Start")
@@ -17,6 +18,7 @@ Do wyświetlenia przykładów z laboratorium wystarczyło do funkcji return prze
 ![list](/Lab5/Scr/7.PNG "Start")
 
 # Formularz do Web Scrapingu
+
 <h1>Do stworzenia formularza wykorzystałem gotowy szablon bootstrapa</h1>
 <h1>Jako przykład wykorzystałem moje reame z Lab 4 i wyszukałem element "h1"</h1>
 Po wypełnieniu formularza działającym linkiem i elementen kórego szukamy funkcja z wie czego ma szukać.
