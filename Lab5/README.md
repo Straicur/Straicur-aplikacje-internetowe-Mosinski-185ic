@@ -21,7 +21,7 @@ Do wyświetlenia przykładów z laboratorium wystarczyło do funkcji return prze
 # Formularz do Web Scrapingu
 
 <h1>Do stworzenia formularza wykorzystałem gotowy szablon bootstrapa</h1>
-<h1>Jako przykład wykorzystałem moje reame z Lab 4 i wyszukałem element "h1"</h1>
+<h1>Jako przykład wykorzystałem moje readme z Lab 4 i wyszukałem element "h1"</h1>
 Po wypełnieniu formularza działającym linkiem i elementen kórego szukamy funkcja z wie czego ma szukać.
 Po pobraniu wskazanego elementu poszukiwane są w nim tagi :
 <ul>
@@ -33,9 +33,11 @@ Po pobraniu wskazanego elementu poszukiwane są w nim tagi :
   <li>text(jest to tekst z danego tagu)</li>
 </ul>
 <h1>Przed wyszukaniem</h1>
+
 ![list](/Lab5/Scr/5.PNG "Start")
 
 <h1>Po wyszukaniu.Zostało odnalezione 7 elementów.</h1>
+
 ![list](/Lab5/Scr/4.PNG "Start")
 
 # Szuaknie elemntów ze strony przy pomocy xml i XPath
@@ -46,12 +48,13 @@ Po pobraniu wskazanego elementu poszukiwane są w nim tagi :
 
 ![list](/Lab5/Scr/6.PNG "Start")
 
-<h1>Element pobrany przy pomocy XPath</h1>
-Szukanie odbywa się za pomocą xPath czyli ścieżki w drzewie projektu .
+<h1>Element pobrany przy pomocy Klasy</h1>
+Szukanie odbywa się za pomocą nazwy klasy w której znajduje się nasz szukany obiekt.
 
 ![list](/Lab5/Scr/10.PNG "Start")
 
-<h1>Element pobrany przy pomocy Klasy</h1>
-Szukanie odbywa się za pomocą nazwy klasy w której znajduje się nasz szukany obiekt.
+<h1>Element pobrany przy pomocy XPath</h1>
+Szukanie odbywa się za pomocą xPath czyli ścieżki w drzewie projektu .
+
 
 ![list](/Lab5/Scr/9.PNG "Start")
