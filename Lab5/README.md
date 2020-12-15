@@ -3,6 +3,7 @@
 <h1>Na potrzeby Laboratorium stworzyłem nową aplikację . </h1>
 <h1>Oczywiście przed dodaniem elementów pobrałem  Beautifulsoup4 oraz lxml . </h1>
 <h1>Dla każdej z podstrony dodałem widoki</h1>
+
 # Przykłady z zajęć
 
 Do wyświetlenia przykładów z laboratorium wystarczyło do funkcji return przekazać render z dobrze ustawionym słownikiem oraz requestem . 
@@ -38,6 +39,7 @@ Po pobraniu wskazanego elementu poszukiwane są w nim tagi :
 ![list](/Lab5/Scr/4.PNG "Start")
 
 # Szuaknie elemntów ze strony przy pomocy xml i XPath
+
 <h1>Na tej podstronie wykorzystałem obie metody :</h1>
 <h1>- pobranie elementu za pomocą klasy </h1>
 <h1>- pobranie elementu za pomocą ścieżki xpath</h1>
