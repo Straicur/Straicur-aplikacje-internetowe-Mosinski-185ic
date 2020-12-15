@@ -4,11 +4,12 @@
 <h1Oczywiście przed dodaniem elementów pobrałem  Beautifulsoup4 oraz lxml . </h1>
 
 # Przykłady z zajęć
-![list](Lab5/Scr/2.PNG "Start")
+![list](/Scr/2.PNG "Start")
 
 # Formularz do Web Scrapingu
 <h1>Do stworzenia formularza wykorzystałem szablon bootstrapa</h1>
-![list](Lab5/Scr/2.PNG "Start")
+
+![list](/Scr/2.PNG "Start")
 
 # Przykłady z zajęć
-![list](Lab5/Scr/2.PNG "Start")
+![list](/Scr/2.PNG "Start")
