@@ -2,7 +2,7 @@
 
 <h1>Przykłady ze strony <a href="https://mmazurek.dev/tag/redis-i-python/?order=asc" rel="nofollow">strona</a></h1>
 
-# 1 Check
+# Check
 ![list](/Lab7/SCR/1.PNG "Start")
 
 W poniższym kodzie nawiązujemy połączenie z redisem , następnie dodajemy wartość i klucz i na koniec zostaje ona wyświetlona.
