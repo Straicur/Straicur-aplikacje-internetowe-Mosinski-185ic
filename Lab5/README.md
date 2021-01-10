@@ -1,86 +1,60 @@
-# Laboratorium 6 REST API z DRF (Kontynuacja)
-<p><a href = "https://github.com/wsvincent/restapiswithdjango">Repozytorium poglądowe </a></p>
+# Laboratorium 5 Web Scraping
 <br>
-Kontynuacja Lab 4.Dodałem viewsety, routery, uwierzytelnianie oraz licznik wizyt z użyciem cookies w podstronie /test_cookie/. Wymagane było korzystanie z dokumentacji przy większych zmiannach .
-<br>
-Zmiany api.
-<br>
-Dodałem widok dla logawania i wylogowania , resetu hasła i potwierdzenia resetu oraz widok rejestracji przy użyciu pakietu Django-rest-auth .
+<h1>Na potrzeby Laboratorium stworzyłem nową aplikację . </h1>
+<h1>Oczywiście przed dodaniem elementów pobrałem  Beautifulsoup4 oraz lxml . </h1>
+<h1>Dla każdej z podstrony dodałem widoki</h1>
 
-<h1>DRF api\v1</h1>
-<h1>Login</h1>
+# Przykłady z zajęć
 
-![list](DRF/static/Scr/1.PNG "Start")
-<h1>Logout</h1>
+Do wyświetlenia przykładów z laboratorium wystarczyło do funkcji return przekazać render z dobrze ustawionym słownikiem oraz requestem . 
 
-![list](DRF/static/Scr/2.PNG "Start")
-<h1>Password Reset</h1>
+![list](/Lab5/Scr/1.PNG "Start")
 
-![list](DRF/static/Scr/3.PNG "Start")
-<h1>Password Reset confirm</h1>
+![list](/Lab5/Scr/8.PNG "Start")
 
-![list](DRF/static/Scr/4.PNG "Start")
-<h1>Register</h1>
+![list](/Lab5/Scr/2.PNG "Start")
 
-![list](DRF/static/Scr/5.PNG "Start")
-<h1>Uwierzytelnienie Tocken</h1>
+![list](/Lab5/Scr/3.PNG "Start")
 
-Na poniższym screanie uruchamiam uwierzytelnianie za pomocą tokena. Aby teraz móc się zalogować potrzebny jest tocken przypisany do konta . 
+![list](/Lab5/Scr/7.PNG "Start")
 
-![list](DRF/static/Scr/8.PNG "Start")
-<h1>Tockeny</h1>
+# Formularz do Web Scrapingu
 
-![list](DRF/static/Scr/6.PNG "Start")
-<h1>Zalogowanie się przy pomocy tokena</h1>
+<h1>Do stworzenia formularza wykorzystałem gotowy szablon bootstrapa</h1>
+<h1>Jako przykład wykorzystałem moje readme z Lab 4 i wyszukałem element "h1"</h1>
+Po wypełnieniu formularza działającym linkiem i elementen kórego szukamy funkcja z wie czego ma szukać.
+Po pobraniu wskazanego elementu poszukiwane są w nim tagi :
+<ul>
+  <li>span</li>
+  <li>id</li>
+  <li>class</li>
+  <li>alt</li>
+  <li>href</li>
+  <li>text(jest to tekst z danego tagu)</li>
+</ul>
+<h1>Przed wyszukaniem</h1>
 
-![list](DRF/static/Scr/10.PNG "Start")
+![list](/Lab5/Scr/5.PNG "Start")
 
-<h1>Tworzenie nowego użytkonika </h1>
+<h1>Po wyszukaniu.Zostało odnalezione 7 elementów.</h1>
 
-![list](DRF/static/Scr/12.PNG "Start")
-<h1>Zarejestrowanie i otrzymanie tockena użytkownika </h1>
+![list](/Lab5/Scr/4.PNG "Start")
 
-![list](DRF/static/Scr/13.PNG "Start")
+# Szuaknie elemntów ze strony przy pomocy xml i XPath
 
-<h1>Uwierzytelnienia</h1>
-DRF posiada 2 domyślne metody uwierzytelniania :SessionAuthentication i BasicAuthentication .  W poniższym screanie wybieram SessionAuthentication i TockenAuthentication dzięki czemu urzytkownik bez tokenu może się zalogować .
+<h1>Na tej podstronie wykorzystałem obie metody :</h1>
+<h1>- pobranie elementu za pomocą klasy </h1>
+<h1>- pobranie elementu za pomocą ścieżki xpath</h1>
 
-![list](DRF/static/Scr/9.PNG "Start")
+![list](/Lab5/Scr/6.PNG "Start")
 
+<h1>Element pobrany przy pomocy Klasy</h1>
+Szukanie odbywa się za pomocą nazwy klasy w której znajduje się nasz szukany obiekt.
 
-Stworzyłem również dla api v1 a dokładnie dla url "api/v1/test_cookie" bardzo prosty licznik wejść. Stworzyłem nową metodę oraz podpiąłem ją pod odpowiedni url . Metoda ta zlicza ilość wejść na podstronę dzięki request.COOKIE.get , po wiejściu na podstronę po raz pierwszy cookie zawiera text "Welcome for the first time" oraz visits = 1, po kolejnych wejściach coockie zawiera text "Welcome back" oraz liczbę wejść visits .   
+![list](/Lab5/Scr/10.PNG "Start")
 
-<h1>Metoda</h1>
-
-![list](DRF/static/Scr/16.PNG "Start")
-<h1>Url</h1>
-
-![list](DRF/static/Scr/17.PNG "Start")
-<h1>Cookie. Pierwsze wejście.</h1>
-
-![list](DRF/static/Scr/14.PNG "Start")
-<h1>Cookie. Kolejne wejście.</h1>
-
-![list](DRF/static/Scr/18.PNG "Start")
-
-![list](DRF/static/Scr/15.PNG "Start")
+<h1>Element pobrany przy pomocy XPath</h1>
+Szukanie odbywa się za pomocą xPath czyli ścieżki w drzewie projektu .
 
 
-
-
-<h1>DRF api\v2</h1>
-<h1>Viewsety</h1>
-Do api/v2 zostały dodane view sety oraz routery .
-Zamiast wcześniej stworzonych 2 viewsów KsiazkaList i KsiazkaDetail stworzyłem 1 viewset KsiazkaViewSet . 
-W KsiazkaViewSet jeszcze jedną z zmian jest dodanie w permision_classes dodatkowego permision a dokładnie Is Authonticated , ponieważ wiesety nie odczytują z ustawień defaultpermission przez co nie zalogowany użytkownik mógł widzić posty .
-Natomiast zamiast url patterns trzeba wykorzystać routery . Po zmianach jest znacznie mniej kodu. Co do wyglądu naszych podstron są one takie same jak przy wykorzystaniu wczesniejszych viewsów.
-
-
-![list](DRF/static/Scr/19.PNG "Start")
-
-<h1>Router</h1>
-Przy pomocy SimpleRouter tworzymy nasz router . Następnie przy pomiocy metody regiter dodajemy nasze wcześniej stworzone viwesety oraz na konieć do zmiennej urlpatterns przypisujemy router.urls która tworzy za nas wszystkie urlpatterns.
-
-![list](DRF/static/Scr/20.PNG "Start")
-
-
+![list](/Lab5/Scr/9.PNG "Start")
