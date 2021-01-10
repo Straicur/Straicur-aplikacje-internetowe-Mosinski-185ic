@@ -9,7 +9,7 @@ W poniższym kodzie nawiązujemy połączenie z redisem , następnie dodajemy wa
 
 ![list](/Lab7/SCR/2.PNG "Start")
 
-Opcja append(dodaje wartość do podanego klucza) i delete(natychmiast usuwa klucz). Dzięki decode_response = true zwracamy stringa,
+Opcja append(dodaje wartość do podanego klucza) i delete(natychmiast usuwa klucz). Dzięki decode_response = true zwracamy stringa.
 
 ![list](/Lab7/SCR/3.PNG "Start")
 
