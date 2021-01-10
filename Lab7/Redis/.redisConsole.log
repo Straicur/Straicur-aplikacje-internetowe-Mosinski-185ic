@@ -1,0 +1,13 @@
+{"id":"tbsiFpUn3OGfK6vM","command":"GET","arguments":"some-key"}
+{"id":"quyWoTIeNDALE76g","command":"RPUSH","arguments":"example-list2 \"hello\""}
+{"id":"KPT3G1uQX7Ve0nRc","command":"HGETALL","arguments":"test_hash"}
+{"id":"Vayx0uOco3LBpjDG","command":"HKEYS","arguments":"test_hash"}
+{"id":"URD2ELr4fZgNphTQ","command":"HEXISTS","arguments":"test_hash key"}
+{"id":"8k0eH9WU7mOL5uDr","command":"HVALS","arguments":"test_hash"}
+{"id":"3LJXjkh4YU6ElqMi","command":"PUBLISH","arguments":"testowy_kanal_komunikacyjnytestowy_kanal_komunikacyjny WIADOMOSC"}
+{"id":"u4QRYcamDeb5ZBP1","command":"PUBLISH","arguments":"testowy_kanal_komunikacyjny wIDOmoSc"}
+{"id":"JL9eS3NFVZfCcHmx","command":"XADD","arguments":"testowy_strumien() * key val"}
+{"id":"z8IXFbx5dgGCWR0U","command":"XADD","arguments":"testowy_strumien * key val"}
+{"id":"wWc2r8QzXj7LRG3Z","command":"SET","arguments":"test_key 15"}
+{"id":"ogbF4EJvr6qpOtPy","command":"APPEND","arguments":"test_key 11"}
+{"id":"gz4X6O7LP2fWmGBV","command":"SET","arguments":"test_key 15"}
