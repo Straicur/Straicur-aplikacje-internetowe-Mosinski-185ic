@@ -104,7 +104,7 @@ Nasłuchiwanie zmian klucza . Najpierw ustawiona do klucza zostaje wartość 15 
 
 # Django-Redis-Celery
 Aby wszystko zadziałało na windowsie potrzebne było potrzebne parę zmian m.in: pobranie odpowiednich pakietów , cofnięcie się z wersją celery i zainstalowanie visual c++ tools. 
-Wygląd strony
+<h1>Wygląd strony</h1>
 
 ![list](/Lab7/SCR/30.PNG "Start")
 
