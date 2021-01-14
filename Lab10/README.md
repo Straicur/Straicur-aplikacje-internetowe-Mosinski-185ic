@@ -1,6 +1,6 @@
 # Linki przekierowujące do Labolatoriów 
 
-![list](/Lab10/SCR//Scr/1.PNG "Start")
+![list](/Lab10/SCR//1.PNG "Start")
 
 ## Podstrony postu:
 
