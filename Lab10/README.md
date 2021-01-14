@@ -249,6 +249,7 @@ const isLocalhost = Boolean(
 ```
 Modal.js
 ``` python 
+    
     import React, { Component } from "react";
     import DatePicker from 'react-date-picker'
     import {
