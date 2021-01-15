@@ -16,8 +16,8 @@ W poniższych screanach pokazana jest funkcjonalność oraz dane po stronie Fron
 ![list](/Lab10/SCR//2.PNG "Start")
 
 ## Backend w Diango z DRF Zmiany
-
-Najpierw instalacja nowych pakietów.
+Przemyślenia : Backend w django jest bardzo łatwo postawić plus przy wykorzystaniu DRF i jego zapisu w postaci jsona jest bardzo łatwo jest pobrać i odczytać te dane w frontendzie.
+Wymagane nowe pakiety.
 ```pip install django-cors-headers ```
 ```pip install djangorestframework ```
 Settings.py
@@ -86,6 +86,9 @@ class DetailTodo(generics.RetrieveAPIView):
 ```
 
 ## Frontend React Zmiany
+
+Przemyślenia : W reacie po kilku modyfikacjach i użyciu axiosa do pobierania/pushowania/usuwania danych z backendu , tworzenie frontendu strony jest w miare łatwe i przyjemne.
+
 Po stworzeniu apki i zainstalowaniu bootstrapa przechodzimy do zmian .
 
 index.js
@@ -492,6 +495,6 @@ App.js
 ## Zmiany 
 
 Dodałem do modelu created_at , w frontendzie kilka poprawek oraz wyświetlam Tytuł , Opis oraz Date stworzenia zamias samego tytułu .
-<br>
+Poza tymi małymi modyfikacjami nie miałem koncepcji co dodać aby nie przebudować całej aplikacji .
 Co do błędu ``` Access to XMLHttpRequest at 'http://localhost:8000/api/todos/' from origin 'http://localhost:3000' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. ```
 Spotkałem się z nim w google chromie (wystarczy dodać rozszerzenie) .
