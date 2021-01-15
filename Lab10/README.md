@@ -492,5 +492,6 @@ App.js
 ## Zmiany 
 
 Dodałem do modelu created_at , w frontendzie kilka poprawek oraz wyświetlam Tytuł , Opis oraz Date stworzenia zamias samego tytułu .
+<br>
 Co do błędu ``` Access to XMLHttpRequest at 'http://localhost:8000/api/todos/' from origin 'http://localhost:3000' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. ```
 Spotkałem się z nim w google chromie (wystarczy dodać rozszerzenie) .
