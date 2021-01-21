@@ -129,6 +129,7 @@ def tutorial_list_published(request):
 ```
 <h1>Nowe pliki.</h1>
 ```models.py```
+
 ``` python 
 from django.db import models
 from django.utils import timezone
@@ -138,7 +139,9 @@ class Tutorial(models.Model):
     description = models.CharField(max_length=200,blank=False, default='')
     published = models.BooleanField(default=False)
 ```
+
 ```serializers.py```
+
 ``` python 
 from rest_framework import serializers 
 from tutorials.models import Tutorial
