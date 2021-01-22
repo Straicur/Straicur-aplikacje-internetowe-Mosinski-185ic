@@ -159,8 +159,9 @@ class TutorialSerializer(serializers.ModelSerializer):
 
 ## React-CRUD
 <h1>Frontend z poradnika bez większych zmian.</h1>
-Do komunikacji przy pomocy axiosa z backendem wymagane jest stworzenie pliku ```http-common.js```
-``` JS
+Do komunikacji przy pomocy axiosa z backendem wymagane jest stworzenie pliku ```http-common.js```.
+
+``` JavaScript
 import axios from "axios";
 
 export default axios.create({
@@ -170,8 +171,10 @@ export default axios.create({
   }
 });
 ```
+
 W poradniku zabrakło jednak ```serviceWorker.js```.Kod:
-``` JS
+
+``` JavaScript
 
 const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
