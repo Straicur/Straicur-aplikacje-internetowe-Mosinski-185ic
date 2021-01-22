@@ -11,7 +11,7 @@
 <h1>Po dodaniu</h1>
 
 ![list](/Lab9/bzkRestApis/SCR/3.PNG "Start")
-<h1>Wygląd szczegółów</h1>
+<h1>Wygląd szczegółów wybranego tutoriala</h1>
 
 ![list](/Lab9/bzkRestApis/SCR/7.PNG "Start")
 <h1>Wyszukowanie</h1>
@@ -127,7 +127,9 @@ def tutorial_list_published(request):
         tutorials_serializer = TutorialSerializer(tutorials, many=True)
         return JsonResponse(tutorials_serializer.data, safe=False)
 ```
+
 <h1>Nowe pliki.</h1>
+
 ```models.py```
 
 ``` python 
@@ -159,7 +161,7 @@ class TutorialSerializer(serializers.ModelSerializer):
 
 ## React-CRUD
 <h1>Frontend z poradnika bez większych zmian.</h1>
-Do komunikacji przy pomocy axiosa z backendem wymagane jest stworzenie pliku ```http-common.js```.
+Do komunikacji przy pomocy axiosa z backendem wymagane jest stworzenie pliku ```http-common.js``` .
 
 ``` JavaScript
 import axios from "axios";
