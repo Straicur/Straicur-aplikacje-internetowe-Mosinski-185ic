@@ -161,7 +161,8 @@ class TutorialSerializer(serializers.ModelSerializer):
 
 ## React-CRUD
 <h1>Frontend z poradnika bez większych zmian.</h1>
-Do komunikacji przy pomocy axiosa z backendem wymagane jest stworzenie pliku ```http-common.js``` .
+
+Do komunikacji przy pomocy axiosa z backendem wymagane jest stworzenie pliku ```http-common.js```.
 
 ``` JavaScript
 import axios from "axios";
