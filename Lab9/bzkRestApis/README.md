@@ -17,7 +17,7 @@
 <h1>Wyszukowanie</h1>
 
 ![list](/Lab9/bzkRestApis/SCR/5.PNG "Start")
-<h1>Edycja posta</h1>
+<h1>Edycja tutariala</h1>
 
 ![list](/Lab9/bzkRestApis/SCR/9.PNG "Start")
 <h1>Dane w JSONIe po stronie backendu</h1>
