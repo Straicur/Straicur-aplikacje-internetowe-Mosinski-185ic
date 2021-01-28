@@ -1,124 +1,183 @@
-# Lab 10 Django + React (aplikacja typu ToDo)
-
+# Lab 9 Django + React (aplikacja CRUD)
+<h1>Strona stworzona na podstawie <a href="https://bezkoder.com/django-react-axios-rest-framework/" rel="nofollow">poradnika</a></h1>
 
 ## Wygląd strony:
-W poniższych screanach pokazana jest funkcjonalność oraz dane po stronie Frontend jak i Backend .
-![list](/Lab10/SCR//3.PNG "Start")
+<h1>Pusta strona główna</h1>
 
-![list](/Lab10/SCR//4.PNG "Start")
+![list](/Lab9/bzkRestApis/SCR/1.PNG "Start")
+<h1>Strona dodawania</h1>
 
-![list](/Lab10/SCR//5.PNG "Start")
+![list](/Lab9/bzkRestApis/SCR/2.PNG "Start")
+<h1>Po dodaniu</h1>
 
-![list](/Lab10/SCR//6.PNG "Start")
+![list](/Lab9/bzkRestApis/SCR/3.PNG "Start")
+<h1>Wygląd szczegółów wybranego tutoriala</h1>
 
-![list](/Lab10/SCR//1.PNG "Start")
+![list](/Lab9/bzkRestApis/SCR/7.PNG "Start")
+<h1>Wyszukowanie</h1>
 
-![list](/Lab10/SCR//2.PNG "Start")
+![list](/Lab9/bzkRestApis/SCR/5.PNG "Start")
+<h1>Edycja tutariala</h1>
 
-## Backend w Diango z DRF Zmiany
-Przemyślenia : Backend w django jest bardzo łatwo postawić plus przy wykorzystaniu DRF i jego zapisu w postaci jsona jest bardzo łatwo jest pobrać i odczytać te dane w frontendzie.
-Wymagane nowe pakiety.
-```pip install django-cors-headers ```
-```pip install djangorestframework ```
-Settings.py
+![list](/Lab9/bzkRestApis/SCR/9.PNG "Start")
+<h1>Dane w JSONIe po stronie backendu</h1>
+
+![list](/Lab9/bzkRestApis/SCR/11.PNG "Start")
+
+## Wymagane zmiany po stronie backendu:
+
+```settings.py```
 ``` python 
+
 INSTALLED_APPS = [
-    ...
-    'corsheaders',         
+     ...
     'rest_framework',
-    'todo',     
-  ]
+    'tutorials.apps.TutorialsConfig',
+    'corsheaders',
+]
+
+MIDDLEWARE = [
+    ...
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000"
+]
+REST_FRAMEWORK = {
+'DEFAULT_PERMISSION_CLASSES': [
+'rest_framework.permissions.AllowAny',
+]
+}
+CORS_ORIGIN_WHITELIST = (
+     'http://localhost:8000',
+ ) 
 ```
+```views.py``` stworzony przy pomocy <a href="https://bezkoder.com/django-react-axios-rest-framework/" rel="nofollow">poradnika</a>. Kod wymagał małych zmian aby poprawnie działać.
 
 ``` python 
- MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',      
-    ...
-]
+from django.shortcuts import render
+
+from django.http.response import JsonResponse
+from rest_framework.parsers import JSONParser 
+from rest_framework import status
+ 
+from tutorials.models import Tutorial
+from tutorials.serializers import TutorialSerializer
+from rest_framework.decorators import api_view
+
+
+@api_view(['GET', 'POST', 'DELETE'])
+def tutorial_list(request):
+    if request.method == 'GET':
+        tutorials = Tutorial.objects.all()
+        
+        title = request.query_params.get('title', None)
+        if title is not None:
+            tutorials = tutorials.filter(title__icontains=title)
+        
+        tutorials_serializer = TutorialSerializer(tutorials, many=True)
+        return JsonResponse(tutorials_serializer.data, safe=False)
+        # 'safe=False' for objects serialization
+ 
+    elif request.method == 'POST':
+        tutorial_data = JSONParser().parse(request)
+        tutorial_serializer = TutorialSerializer(data=tutorial_data)
+        if tutorial_serializer.is_valid():
+            tutorial_serializer.save()
+            return JsonResponse(tutorial_serializer.data, status=status.HTTP_201_CREATED) 
+        return JsonResponse(tutorial_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    elif request.method == 'DELETE':
+        count = Tutorial.objects.all().delete()
+        return JsonResponse({'message': '{} Tutorials were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
+ 
+ 
+@api_view(['GET', 'PUT', 'DELETE'])
+def tutorial_detail(request, pk):
+    try: 
+        tutorial = Tutorial.objects.get(pk=pk) 
+    except Tutorial.DoesNotExist: 
+        return JsonResponse({'message': 'The tutorial does not exist'}, status=status.HTTP_404_NOT_FOUND) 
+ 
+    if request.method == 'GET': 
+        tutorial_serializer = TutorialSerializer(tutorial) 
+        return JsonResponse(tutorial_serializer.data) 
+ 
+    elif request.method == 'PUT': 
+        tutorial_data = JSONParser().parse(request) 
+        tutorial_serializer = TutorialSerializer(tutorial, data=tutorial_data) 
+        if tutorial_serializer.is_valid(): 
+            tutorial_serializer.save() 
+            return JsonResponse(tutorial_serializer.data) 
+        return JsonResponse(tutorial_serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
+ 
+    elif request.method == 'DELETE': 
+        tutorial.delete() 
+        return JsonResponse({'message': 'Tutorial was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
+    
+        
+@api_view(['GET'])
+def tutorial_list_published(request):
+    tutorials = Tutorial.objects.filter(published=True)
+        
+    if request.method == 'GET': 
+        tutorials_serializer = TutorialSerializer(tutorials, many=True)
+        return JsonResponse(tutorials_serializer.data, safe=False)
 ```
-``` python 
-CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000',
-     'http://localhost:8000',
-]
-```
-Todo/Models.py 
+
+<h1>Nowe pliki.</h1>
+
+```models.py```
+
 ``` python 
 from django.db import models
 from django.utils import timezone
 
-class Todo(models.Model):
-  title = models.CharField(max_length=120, blank=False, default='')
-  description = models.TextField(max_length=200,blank=False, default='')
-  completed = models.BooleanField(default=False)
-  data_publikacji = models.DateField(blank=True, default=timezone.now)
-  
-  def _str_(self):
-    return self.title 
-```
-Todo/Serializers.py
-``` python 
-from rest_framework import serializers
-from .models import Todo
-
-class TodoSerializer(serializers.ModelSerializer):
-  class Meta:
-    model = Todo
-    fields = ('id', 'title', 'description', 'completed','data_publikacji')
-```
-Todo/views.py
-``` python 
-from django.shortcuts import render
-from rest_framework import viewsets          
-from .serializers import TodoSerializer     
-from .models import Todo        
-from rest_framework import generics             
-
-class TodoView(viewsets.ModelViewSet):      
-    serializer_class = TodoSerializer          
-    queryset = Todo.objects.all()      
-
-class DetailTodo(generics.RetrieveAPIView):
-    serializer_class = TodoSerializer
-    queryset = Todo.objects.all()
-    
-
+class Tutorial(models.Model):
+    title = models.CharField(max_length=70, blank=False, default='')
+    description = models.CharField(max_length=200,blank=False, default='')
+    published = models.BooleanField(default=False)
 ```
 
-## Frontend React Zmiany
+```serializers.py```
 
-Przemyślenia : W reacie po kilku modyfikacjach i użyciu axiosa do pobierania/pushowania/usuwania danych z backendu , tworzenie frontendu strony jest w miare łatwe i przyjemne.
-
-Po stworzeniu apki i zainstalowaniu bootstrapa przechodzimy do zmian .
-
-index.js
 ``` python 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';       
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import "./App.css";
-ReactDOM.render(<App />, document.getElementById('root'));
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+from rest_framework import serializers 
+from tutorials.models import Tutorial
+ 
+ 
+class TutorialSerializer(serializers.ModelSerializer):
+ 
+    class Meta:
+        model = Tutorial
+        fields = ('id',
+                  'title',
+                  'description',
+                  'published')
 ```
-Plik serviceWorker.js który nie był zawarty w poradniku. 
-``` python 
-// This optional code is used to register a service worker.
-// register() is not called by default.
 
-// This lets the app load faster on subsequent visits in production, and gives
-// it offline capabilities. However, it also means that developers (and users)
-// will only see deployed updates on subsequent visits to a page, after all the
-// existing tabs open on the page have been closed, since previously cached
-// resources are updated in the background.
+## React-CRUD
+<h1>Frontend z poradnika bez większych zmian.</h1>
 
-// To learn more about the benefits of this model and instructions on how to
-// opt-in, read https://bit.ly/CRA-PWA
+Do komunikacji przy pomocy axiosa z backendem wymagane jest stworzenie pliku ```http-common.js```.
+
+``` JavaScript
+import axios from "axios";
+
+export default axios.create({
+  baseURL: "http://localhost:8000/api",
+  headers: {
+    "Content-type": "application/json"
+  }
+});
+```
+
+W poradniku zabrakło jednak ```serviceWorker.js```.Kod:
+
+``` JavaScript
 
 const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
@@ -250,251 +309,3 @@ const isLocalhost = Boolean(
     }
   }
 ```
-Modal.js
-``` python 
-    
-    import React, { Component } from "react";
-    import DatePicker from 'react-date-picker'
-    import {
-      Button,
-      Modal,
-      ModalHeader,
-      ModalBody,
-      ModalFooter,
-      Form,
-      FormGroup,
-      Input,
-      Label
-    } from "reactstrap";
-
-    export default class CustomModal extends Component {
-      constructor(props) {
-        super(props);
-        this.state = {
-          activeItem: this.props.activeItem
-        };
-      }
-      handleChange = e => {
-        let { name, value } = e.target;
-        if (e.target.type === "checkbox") {
-          value = e.target.checked;
-        }
-        const activeItem = { ...this.state.activeItem, [name]: value };
-        this.setState({ activeItem });
-      };
-      render() {
-        const { toggle, onSave } = this.props;
-        return (
-          <Modal isOpen={true} toggle={toggle}>
-            <ModalHeader toggle={toggle}> Todo Item </ModalHeader>
-            <ModalBody>
-              <Form>
-                <FormGroup>
-                  <Label for="title">Tytuł</Label>
-                  <Input
-                    type="text"
-                    name="title"
-                    value={this.state.activeItem.title}
-                    onChange={this.handleChange}
-                    placeholder="Enter Todo Title"
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="description">Opis</Label>
-                  <Input
-                    type="text"
-                    name="description"
-                    value={this.state.activeItem.description}
-                    onChange={this.handleChange}
-                    placeholder="Enter Todo description"
-                  />
-                </FormGroup>
-                <FormGroup check>
-                  <Label for="completed">
-                    <Input
-                      type="checkbox"
-                      name="completed"
-                      checked={this.state.activeItem.completed}
-                      onChange={this.handleChange}
-                    />
-                    Skończone
-                  </Label>
-                </FormGroup>
-              </Form>
-            </ModalBody>
-            <ModalFooter>
-              <Button color="success" onClick={() => onSave(this.state.activeItem)}>
-                Zapisz
-                
-              </Button>
-            </ModalFooter>
-          </Modal>
-        );
-      }
-    }
-
-```
-App.js
-``` python 
-
-    import React, { Component } from "react";
-    import Modal from "./components/Modal";
-    import axios from "axios";
-
-    class App extends Component {
-      constructor(props) {
-        super(props);
-        this.state = {
-          viewCompleted: false,
-          activeItem: {
-            title: "",
-            description: "",
-            completed: false
-          },
-          todoList: []
-        };
-      }
-      componentDidMount() {
-        this.refreshList();
-      }
-      refreshList = () => {
-        axios
-          .get("/api/todos/")
-          .then(res => this.setState({ todoList: res.data }))
-          .catch(err => console.log(err));
-      };
-      displayCompleted = status => {
-        if (status) {
-          return this.setState({ viewCompleted: true });
-        }
-        return this.setState({ viewCompleted: false });
-      };
-      renderTabList = () => {
-        return (
-          <div className="my-5 tab-list">
-            <span
-              onClick={() => this.displayCompleted(true)}
-              className={this.state.viewCompleted ? "active" : ""}
-            >
-              Skończone
-            </span>
-            <span
-              onClick={() => this.displayCompleted(false)}
-              className={this.state.viewCompleted ? "" : "active"}
-            >
-              Nieskończone
-            </span>
-          </div>
-        );
-      };
-      renderItems = () => {
-        const { viewCompleted } = this.state;
-        const newItems = this.state.todoList.filter(
-          item => item.completed === viewCompleted
-        );
-        return newItems.map(item => (
-          <li
-            key={item.id}
-            className="list-group-item d-flex justify-content-between align-items-center"
-          >
-            <span
-              className={`todo-title mr-2 ${
-                this.state.viewCompleted ? "completed-todo" : ""
-              }`}
-              title={item.description}
-            >
-              {" Tytuł:  "}
-              {item.title}
-              {" | "}
-              {" Opis:  "}
-              {item.description}
-              {" | "}
-              {"  Stworzone :"}
-              {"  "}
-              {item.data_publikacji}
-            </span>
-            <span>
-              <button
-                onClick={() => this.editItem(item)}
-                className="btn btn-dark mr-2"
-              >
-                {" "}
-                Edytuj{" "}
-              </button>
-              <button
-                onClick={() => this.handleDelete(item)}
-                className="btn btn-danger"
-              >
-                Usuń{" "}
-              </button>
-            </span>
-          </li>
-        ));
-      };
-      toggle = () => {
-        this.setState({ modal: !this.state.modal });
-      };
-      handleSubmit = item => {
-        this.toggle();
-        if (item.id) {
-          axios
-            .put(`http://localhost:8000/api/todos/${item.id}/`, item)
-            .then(res => this.refreshList());
-          return;
-        }
-        axios
-          .post("http://localhost:8000/api/todos/", item)
-          .then(res => this.refreshList());
-      };
-      handleDelete = item => {
-        axios
-          .delete(`http://localhost:8000/api/todos/${item.id}/`)
-          .then(res => this.refreshList());
-      };
-     
-      createItem = () => {
-        const item = { title: "", description: "", completed: false };
-        this.setState({ activeItem: item, modal: !this.state.modal });
-      };
-      editItem = item => {
-        this.setState({ activeItem: item, modal: !this.state.modal });
-      };
-      render() {
-        return (
-          <main className="content">
-            <h1 className="text-white text-uppercase text-center my-4">Todo</h1>
-            <div className="row ">
-              <div className="col-md-6 col-sm-10 mx-auto p-0">
-                <div className="card p-3 szer">
-                  <div className="">
-                    <button onClick={this.createItem} className="btn btn-primary">
-                      Dodaj zadanie
-                    </button>
-                  </div>
-                  {this.renderTabList()}
-                  <ul className="list-group list-group-flush">
-                    {this.renderItems()}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            {this.state.modal ? (
-              <Modal
-                activeItem={this.state.activeItem}
-                toggle={this.toggle}
-                onSave={this.handleSubmit}
-              />
-            ) : null}
-          </main>
-        );
-      }
-    }
-    export default App;
-```
-
-## Zmiany 
-
-Dodałem do modelu created_at , w frontendzie kilka poprawek oraz wyświetlam Tytuł , Opis oraz Date stworzenia zamias samego tytułu .
-Poza tymi małymi modyfikacjami nie miałem koncepcji co dodać aby nie przebudować całej aplikacji .
-Co do błędu ``` Access to XMLHttpRequest at 'http://localhost:8000/api/todos/' from origin 'http://localhost:3000' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. ```
-Spotkałem się z nim w google chromie (wystarczy dodać rozszerzenie) .
